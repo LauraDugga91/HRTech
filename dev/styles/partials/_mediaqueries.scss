@@ -1,0 +1,117 @@
+@media (max-width: 1078px) {
+	nav {
+		.navigationLinks {
+			li {
+				a { 
+					display:none;
+				}
+			}
+		}
+		.tickets {
+			display: none;
+		}
+		div.burger {
+			display: block;
+			position: absolute;
+			right: 0%;
+			padding-right: 2%;
+			padding-top: 2%;
+			z-index: 10000;
+		}
+		.burger1 {
+				display: flex;
+				flex-direction: column;
+				top: 75px;
+				position: absolute;
+			    background-color: black;
+			    z-index: 1;
+			    font-size: 15px;
+		}
+	}
+	.dropdown-content {
+	    display: none;
+	    height: 100vh;
+	    width: 100vw;
+	    margin: 0;
+	    padding: 0;
+	    right: 0;
+	    top: 0;
+	}
+	.dropdown-content a {
+	    color: white;
+	    text-align: center;
+	    font-size: 15px;
+	    text-decoration: none;
+	    display: block;
+	    transition: all 0.3s;
+	    font-weight: 700;
+	    padding: 10px;
+	    button {
+			@include ButtonStyle($green, white, 16px);
+		}
+	}
+	.dropdown-content a:hover {
+		color: $green;
+	}
+	header {
+		.featuringKeynoteLeft, .featuringKeynoteRight{
+			top: 20%;
+		}
+	}
+
+	section.downloadApplication {
+		height: 160vh;
+		.left {
+			width: 100%;
+		}
+		.right {
+			width: 100%;
+			img {
+				height: 200px;
+				clear: both;
+				display: block;
+				margin: 0 auto;
+				margin-top: 40px;
+			}
+		}
+		
+	}
+	#futureOfWork {
+		.icons {
+			display: none;
+		}
+		h3 {
+			padding-top: 70px;
+		}
+	}
+	footer {
+		clear: both;
+		img {
+			clear: both;
+		}
+	}
+}
+@media (max-width: 800px) {
+	header {
+		.featuringKeynote {
+			.featuringKeynoteLeft, .featuringKeynoteRight {
+				.featuring {
+					display: none;
+				}
+				.bold {
+					display: none;
+				}
+				
+			}
+		}
+	}
+	
+}
+
+@media (max-width: 480px) {
+	section.downloadApplication {
+		height: 300vh;
+	}
+	
+}
+

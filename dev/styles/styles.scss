@@ -7,7 +7,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 * { box-sizing: border-box; }
 
 
-
+//Variables
 
 $green: #99cc00;
 
@@ -19,8 +19,9 @@ $green: #99cc00;
 	text-transform: uppercase;
 	border: none;
 	text-align: center;
-
 }
+
+@import "partials/mediaqueries";
 
 
 
@@ -33,38 +34,63 @@ body{
 
 nav {
 	color: white;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,1);
+	height: 80px;
 	display: flex;
 	text-transform: uppercase;
 	position: fixed;
 	z-index: 100;
 	width: 100%;
 	justify-content: space-between;
+	.burger {
+		display: none;
+		color: white;
+		font-size: 30px;
+		background-color: black;
+		text-transform: uppercase;
+	}
 	ul {
 		list-style-type: none;
 		display: flex;
 		flex-direction: row;
+		margin-top: 30px;
 		a{
 			text-decoration: none;
 			color: white;
-			padding: 20px;
+			padding-right: 30px;
 			font-weight: 300;
+			transition: all 0.3s;
+			font-size: 14px;
+		}
+		a:hover {
+			color: $green;
+		}
 
-		}
-		button {
-			@include ButtonStyle($green, white, 16px)
-		}
 	}
 	.navHRTech {
 		padding-left: 20px;
 		padding-top: 15px;
 	}
+
+	button {
+		@include ButtonStyle($green, white, 16px);
+		transition: all 0.3s;
+		height: 40px;
+		margin-top: 20px;
+		font-size: 14px;
+		margin-right: 40px;
+	}
+	button:hover {
+		color: $green;
+		background-color: white;
+	}
 }
+
 
 header {
 	position: relative;
-	clear: both;
 	background-image: url(../../images/hero.jpg);
+	top: 80px;
 	height: 100vh;
 	background-position: center;
 	background-size: cover;
@@ -73,12 +99,13 @@ header {
 			text-transform: uppercase;
 			color: white;
 			font-size: 32px;
+			margin-bottom: 10px;
 		}
 		text-align: center;
 	}
 	ul {
 		list-style-type: none;
-		width: 60%;
+		// width: 60%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: row;
@@ -95,6 +122,7 @@ header {
 		@include ButtonStyle(white, $green, 16px)
 		margin-right: 10px;
 		transition: all 0.2s;
+		margin-bottom: 20px;
 	}
 	.button1:hover {
 		background-color: $green;
@@ -109,26 +137,66 @@ header {
 		background-color: white;
 		color: $green;
 	}
+	.featuringKeynoteLeft {
+		color: white;
+		position: absolute;
+		bottom: 0;
+		left: 2%;
+		text-align: center;
+	}
+	.featuring {
+		margin-bottom: 5px;
+	}
+	.bold {
+		font-weight: 700;
+		font-size: 22px;
+		margin-top: 0px;
+		margin-bottom: 30px;
+	}
+	.featuringKeynoteRight {
+		color: white;
+		position: absolute;
+		bottom: 0;
+		right: 2%;
+		text-align: center;
+		
+	}
 	
 }
 
 h1 {
 	margin-top: 0;
-	font-family: serif;
+	font-family: 'Playfair Display', serif;
+	text-shadow: 1px 1px 20px black;
 	text-align: center;
 	position: absolute;
-	top: 50%;
+	top: 25%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
 	.greatest {
-		font-size: 60px;
+		font-size: 75px;
+		letter-spacing: 0.05em;
+		margin-top: 0px;
+	}
+	.the {
+		position: absolute;
+		top: 35px;
+		left: 55px;
+		font-size: 28px;
+	}
+	.earth {
+		position: absolute;
+		top: 125px;
+		left: 50px;
+		font-size: 28px;
 	}
 
 
 }
 
 .featureCenter {
+	// width: 100%;
 	position: absolute;
 	top: 85%;
 	left: 50%;
@@ -136,6 +204,7 @@ h1 {
 	ul {
 		width: 100%;
 		padding-left: 0;
+		margin-bottom: 5%;
 		li {
 			padding:20px;
 		}
@@ -152,6 +221,7 @@ h1 {
 }
 
 .icons {
+	margin-top: 150px;
 	ul {
 		list-style-type: none;
 		display: flex;
@@ -241,7 +311,7 @@ h1 {
 			height: 40px;
 			position: absolute;
 			bottom: -5px;
-			right: 32%;
+			right: 30%;
 		}
 		
 	}
@@ -250,7 +320,6 @@ h1 {
 		float: left;
 		width: 50%;
 		text-align: center;
-
 		button {
 			@include ButtonStyle(white, black, 14px)
 			margin-top: 30px;
@@ -261,6 +330,9 @@ h1 {
 			color: white;
 			background-color: rgba(0, 0, 0, 0);
 			border: 1px solid white;
+		}
+		.rightContent {
+			transform: translateY(20%);
 		}
 	}
 	.mobileButtons {
