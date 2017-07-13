@@ -1,3 +1,5 @@
+//RESPONSIVE DESIGN MEDIA QUERIES
+
 @media (max-width: 1078px) {
 	nav {
 		.navigationLinks {
@@ -58,7 +60,6 @@
 			top: 20%;
 		}
 	}
-
 	section.downloadApplication {
 		height: 160vh;
 		.left {
@@ -73,8 +74,7 @@
 				margin: 0 auto;
 				margin-top: 40px;
 			}
-		}
-		
+		}	
 	}
 	#futureOfWork {
 		.icons {
@@ -101,17 +101,14 @@
 				.bold {
 					display: none;
 				}
-				
 			}
 		}
 	}
-	
 }
 
 @media (max-width: 480px) {
 	section.downloadApplication {
 		height: 300vh;
 	}
-	
 }
 

@@ -7,7 +7,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 * { box-sizing: border-box; }
 
 
-//Variables
+//SCSS VARIABLES
 
 $green: #99cc00;
 
@@ -24,14 +24,11 @@ $green: #99cc00;
 @import "partials/mediaqueries";
 
 
-
-
 body{
 	font-family: 'Roboto', sans-serif;
 }
 
-// HEADER STYLES
-
+// HEADER AND NAVIGATION STYLES
 nav {
 	color: white;
 	background-color: rgba(0,0,0,1);
@@ -54,7 +51,7 @@ nav {
 		display: flex;
 		flex-direction: row;
 		margin-top: 30px;
-		a{
+		a {
 			text-decoration: none;
 			color: white;
 			padding-right: 30px;
@@ -65,13 +62,11 @@ nav {
 		a:hover {
 			color: $green;
 		}
-
 	}
 	.navHRTech {
 		padding-left: 20px;
 		padding-top: 15px;
 	}
-
 	button {
 		@include ButtonStyle($green, white, 16px);
 		transition: all 0.3s;
@@ -85,7 +80,6 @@ nav {
 		background-color: white;
 	}
 }
-
 
 header {
 	position: relative;
@@ -105,15 +99,12 @@ header {
 	}
 	ul {
 		list-style-type: none;
-		// width: 60%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-
 	}
 	li {
-
 		img {
 			width: 100px;
 		}
@@ -158,10 +149,8 @@ header {
 		position: absolute;
 		bottom: 0;
 		right: 2%;
-		text-align: center;
-		
+		text-align: center;	
 	}
-	
 }
 
 h1 {
@@ -191,12 +180,8 @@ h1 {
 		left: 50px;
 		font-size: 28px;
 	}
-
-
 }
-
 .featureCenter {
-	// width: 100%;
 	position: absolute;
 	top: 85%;
 	left: 50%;
@@ -209,7 +194,6 @@ h1 {
 			padding:20px;
 		}
 	}
-
 }
 
 //FUTURE OF WORK SECTION
@@ -217,7 +201,6 @@ h1 {
 .container {
 	width: 70%;
 	margin: 0 auto;
-
 }
 
 .icons {
@@ -236,7 +219,6 @@ h1 {
 		i {
 			color: #d1d1d1;
 			font-size: 40px;
-
 		}
 		i:hover {
 			color: black;
@@ -272,8 +254,6 @@ h1 {
 		color: $green;
 		font-size: 30px;
 	}
-
-	
 }
 
 
@@ -302,7 +282,6 @@ h1 {
 		text-align: center;
 		.positioning {
 			position: relative;
-
 		}
 		.mobilePhones {
 			height: 40vh;
@@ -313,7 +292,6 @@ h1 {
 			bottom: -5px;
 			right: 30%;
 		}
-		
 	}
 	.right {
 		position: relative;
@@ -339,7 +317,6 @@ h1 {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-
 	}
 	.mobileButton {
 		width: 25%; 
@@ -347,8 +324,6 @@ h1 {
 		margin-right: 10px;
 	}
 }
-
-
 
 //FOOTER STYLES
 
